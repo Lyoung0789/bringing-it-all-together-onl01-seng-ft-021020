@@ -65,7 +65,7 @@ class Dog
         VALUES(?,?)
       SQL
       new_dog = DB[:conn].execute(sql, name, breed)
-      bidning.pry
+      binding.pry
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
   end 
   
