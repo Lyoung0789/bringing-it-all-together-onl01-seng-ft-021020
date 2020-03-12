@@ -103,7 +103,7 @@ def self.find_or_create_by(name:, breed:)
   
   if !dogs.empty?
     binding.pry
-    new_dog = self.new(dogs)
+    new_dog = self.new_from_db(dogs)
     
   else 
     new_dog = self.create({:name => name, :breed => breed})
