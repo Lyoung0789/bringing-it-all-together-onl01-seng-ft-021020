@@ -99,7 +99,7 @@ def self.find_or_create_by(name:, breed:)
     WHERE name = ? AND breed = ?
   SQL
   # binding.pry
-  dogs = DB[:conn].execute(sql, name, breed)
+  dogs = DB[:conn].execute(sql, name, breed).first
   binding.pry 
 
   
