@@ -40,7 +40,7 @@ class Dog
     SQL
     
     this = DB[:conn].execute(sql, name)
-    binding.pry
+    # binding.pry
     #   new_dog = self.new_from_db(row)
     # end 
     
