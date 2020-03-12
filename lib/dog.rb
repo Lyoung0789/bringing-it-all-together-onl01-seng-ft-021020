@@ -93,12 +93,12 @@ def self.find_by_id(id)
   end.first 
 end 
 
-def self.find_or_create_by(name)
+def self.find_or_create_by(hash)
   sql = <<-SQL 
     SELECT * FROM dogs 
     WHERE name = ? AND breed = ?
   SQL
-  dogs = DB[:conn].execute(sql, name)
+  dogs = DB[:conn].execute(sql, hash)
   binding.pry 
 
   
