@@ -98,6 +98,7 @@ def self.find_or_create_by(hash)
     SELECT * FROM dogs 
     WHERE name = ? AND breed = ?
   SQL
+  binding.pry
   dogs = DB[:conn].execute(sql, hash)
   binding.pry 
 
