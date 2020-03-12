@@ -27,9 +27,8 @@ class Dog
   
   
   def self.new_from_db (row)
-    new_dog = self.new(row[1], row[2])
+    new_dog = self.new(row[0], row[1], row[2])
     binding.pry
-    new_dog.id = row[0]
     new_dog
   
   
