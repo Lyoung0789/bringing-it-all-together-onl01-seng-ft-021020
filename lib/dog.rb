@@ -39,7 +39,7 @@ class Dog
       
     SQL
     
-    DB[:conn].execute(sql, name)
+    new_dog = DB[:conn].execute(sql, name)
   end
   
   
