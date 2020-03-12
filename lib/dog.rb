@@ -76,8 +76,8 @@ end
 
 def self.create(hash)
   new_dog = self.new(hash)
-  dog.save
-  dog
+  new_dog.save
+  new_dog
 end 
   
 end 
