@@ -39,9 +39,9 @@ class Dog
       
     SQL
     
-    DB[:conn].execute(sql, name).map do |row|
-      new_dog = self.new_from_db(row)
-    end 
+    this = DB[:conn].execute(sql, name)
+    #   new_dog = self.new_from_db(row)
+    # end 
     
   end
   
