@@ -39,10 +39,11 @@ class Dog
       
     SQL
     
-    this = DB[:conn].execute(sql, name)
-    # binding.pry
-    #   new_dog = self.new_from_db(row)
-    # end 
+    DB[:conn].execute(sql, name).map do |row|
+      binding.pry 
+      self.new_from_db(row)
+    end.first
+    
     
   end
   
