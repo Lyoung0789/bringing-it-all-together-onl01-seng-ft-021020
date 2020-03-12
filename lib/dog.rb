@@ -100,7 +100,7 @@ def self.find_or_create_by(name:, breed:)
   SQL
   # binding.pry
   dogs = DB[:conn].execute(sql, name, breed)
-  binding.pry 
+  
   if !dog.empty?
     new_dog = self.new(dogs)
   else 
