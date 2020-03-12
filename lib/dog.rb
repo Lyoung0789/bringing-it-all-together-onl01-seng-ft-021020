@@ -102,6 +102,7 @@ def self.find_or_create_by(name:, breed:)
   dogs = DB[:conn].execute(sql, name, breed)
   
   if !dogs.empty?
+    dog_data = [0]
     new_dog = self.new(dogs)
   else 
     new_dog = self.create({:name => name, :breed => breed})
