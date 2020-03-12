@@ -87,7 +87,7 @@ def self.find_by_id(id)
   SQL
   
   DB[:conn].execute(sql , id).map do |row|
-    binding.pry
+    # binding.pry
     self.new_from_db(row)
   end.first 
   
