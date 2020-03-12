@@ -40,7 +40,7 @@ class Dog
     SQL
     
     DB[:conn].execute(sql, name).map do |row|
-      binding.pry 
+      # binding.pry 
       self.new_from_db(row)
     end.first
     
@@ -91,6 +91,10 @@ def self.find_by_id(id)
     # binding.pry
     self.new_from_db(row)
   end.first 
-  
 end 
+
+def self.find_or_create_by(hash )
+end 
+
+
 end 
