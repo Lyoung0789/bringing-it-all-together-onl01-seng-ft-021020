@@ -77,6 +77,7 @@ end
 def self.create(hash)
   new_dog = self.new(hash)
   new_dog.save
+  binding.pry 
   new_dog
 end 
   
