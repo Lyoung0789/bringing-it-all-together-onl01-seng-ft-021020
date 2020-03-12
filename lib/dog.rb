@@ -99,8 +99,12 @@ def self.find_or_create_by(name:, breed:)
     WHERE name = ? AND breed = ?
   SQL
   # binding.pry
-  dogs = DB[:conn].execute(sql, name, breed).first
+  dogs = DB[:conn].execute(sql, name, breed)
   binding.pry 
+  if !dog.empty?
+    new_dog = self.new(dogs)
+  else 
+    new_dog = self.create(:name::name, :breed::breed)
 
   
 end 
