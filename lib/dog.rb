@@ -40,7 +40,7 @@ class Dog
     SQL
     
     DB[:conn].execute(sql, name).map do |row|
-      self.new_from_db(row)
+      new_dog = self.new_from_db(row)
     end 
     binding.pry
   end
