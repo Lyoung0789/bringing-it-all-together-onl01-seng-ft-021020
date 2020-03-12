@@ -100,8 +100,7 @@ def self.find_or_create_by(name, breed)
   SQL
   dogs = DB[:conn].execute(sql, name, breed)
   binding.pry 
-  
-  if 
+
   
 end 
 
