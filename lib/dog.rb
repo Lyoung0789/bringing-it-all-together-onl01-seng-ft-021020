@@ -106,6 +106,7 @@ def self.find_or_create_by(name:, breed:)
     dog_data = dogs[0]
     # binding.pry 
     # new_dog = self.new(dog_data[0], dog_data[1], dog_data[2])
+    new_dog = self.new_from_db(dogs)
   else 
     new_dog = self.create({:name => name, :breed => breed})
   end 
