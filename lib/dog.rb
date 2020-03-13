@@ -97,6 +97,7 @@ def self.find_or_create_by(name:, breed:)
   sql = <<-SQL 
     SELECT * FROM dogs 
     WHERE name = ? AND breed = ?
+    LIMIT 1
   SQL
   # binding.pry
   dogs = DB[:conn].execute(sql, name, breed)
@@ -110,8 +111,6 @@ def self.find_or_create_by(name:, breed:)
   end 
   new_dog
 
-  
 end 
-
 
 end 
